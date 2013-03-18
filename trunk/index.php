@@ -1,13 +1,28 @@
 <?php
 
 /**
-* @version      $Id: wmessengerpro.php 13 2011-06-05 08:19:47Z scheufler $
 * @package      Books
 * @copyright    Copyright (C) 2013 Daniel Scheufler. All rights reserved.
 * @license      GNU/GPL v3
 */
 
-echo "Hello world";
+echo "Books";
 
-Test
+//Datenbankverbindung
+$books = 'db/metadata.db';
+
+try
+{$db = new PDO('sqlite:'.$books);}
+catch( PDOException $e )
+{die( $e->getMessage() );}
+
+
+
+// Abfrage starten
+$query = 'SELECT * FROM authors';
+
+foreach ($db -> query($query) as $row) {
+    var_dump($row);
+}
+
 ?>

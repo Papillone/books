@@ -22,7 +22,8 @@ catch( PDOException $e )
 $query = 'SELECT * FROM authors';
 
 foreach ($db -> query($query) as $row) {
-    var_dump($row);
+    echo $row[name];
+  //  echo var_dump($row);
 }
 
 ?>

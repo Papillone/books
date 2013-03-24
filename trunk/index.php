@@ -1,7 +1,7 @@
 <?php
 
 /**
-* @package      Books
+* @package      Bookstest
 * @copyright    Copyright (C) 2013 Daniel Scheufler. All rights reserved.
 * @license      GNU/GPL v3
 */
